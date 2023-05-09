@@ -20,8 +20,9 @@
 	--color-gray-800: #1f2937;
 	--color-gray-900: #111827;
 
-	--color-blue: #3894ff;
-	--color-blue-rgb: 56, 148, 255;
+	--color-blue: #5db1bd;
+	--color-blue-rgb: 93,177,189;
+	--color-brown: #5e3225;
 	--color-green: #17c083;
 	--color-green-rgb: 23, 192, 131;
 	--color-orange: #ff5d01;
@@ -36,8 +37,8 @@
 
 :root {
 	color-scheme: light;
-	--theme-accent: var(--color-orange);
-	--theme-accent-rgb: var(--color-orange-rgb);
+	--theme-accent: var(--color-blue);
+	--theme-accent-rgb: var(--color-blue-rgb);
 	--theme-accent-opacity: 0.1;
 	--theme-divider: var(--color-gray-100);
 	--theme-text: var(--color-gray-800);
