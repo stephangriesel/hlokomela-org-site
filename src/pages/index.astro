@@ -8,6 +8,11 @@ import { SITE } from '../config';
 
 import vision from '../images/vision.png';
 import mission from '../images/mission.png';
+import whatwedo from '../images/whatwedo.png';
+import healthsocial from '../images/healthsocial.png';
+import wherewework from '../images/wherewework.png';
+import whoweserve from '../images/whoweserve.jpg';
+import partners from '../images/partners.jpg';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -81,7 +86,7 @@ allMedia = allMedia.sort(
     <div class="wrapper">
       <main class="content">
         <section class="intro">
-          <div>
+          <div class="flex flex-col content-center pt-5 pb-20">
             <h1>WHO WE ARE</h1>
             <p>
               Hlokomela was established in 2005 in response to research that
@@ -92,7 +97,7 @@ allMedia = allMedia.sort(
               000 people annually (direct and indirect beneficiaries).
             </p>
           </div>
-          <div>
+          <div class="flex flex-col content-center pt-5 pb-20">
             <h1>WHO WE BECAME</h1>
             <p>
               In 2020, faced with the COVID-19 pandemic, Hlokomela capitalised
@@ -109,16 +114,20 @@ allMedia = allMedia.sort(
               organisation once implemented in full.
             </p>
           </div>
-          <div class="flex flex-col md:flex-row">
-            <div class="bg-amber-950 md:w-1/2 lg:w-1/3 h-64 md:h-auto">
-              <img src={vision} class="h-24" />
+          <div class="flex flex-col md:flex-row pt-5 pb-20">
+            <div
+              class="bg-amber-950 md:w-1/2 flex flex-col content-center align-center justify-center h-96 w-96 p-5"
+            >
+              <img src={vision} class="h-24" alt="vision icon" />
               <h1 class="text-white">OUR VISION</h1>
               <p class="text-white">
                 Create a culture of caring that empowers all
               </p>
             </div>
-            <div class="bg-[#5db1bd] md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-              <img src={mission} alt="" srcset="" />
+            <div
+              class="bg-[#5db1bd] md:w-1/2 flex flex-col content-center align-center justify-center h-96 w-96 p-5"
+            >
+              <img src={mission} alt="mission icon" />
               <h1 class="text-white">OUR MISSION</h1>
               <p class="text-white">
                 To provide quality, all-inclusive health care to everyone in the
@@ -126,22 +135,67 @@ allMedia = allMedia.sort(
               </p>
             </div>
           </div>
-        </section>
-        <section aria-label="Blog post list">
-          {allPosts.map((p) => <BlogPostPreview post={p} />)}
-        </section>
-        <div class="flex flex-col md:flex-row">
-          <div class="bg-gray-300 md:w-1/2 lg:w-1/3 h-64 md:h-auto">
-            <section aria-label="Blog post list">
-              {allPosts.map((p) => <BlogPostPreview post={p} />)}
-            </section>
+          <div class="pt-5 pb-20">
+            <h1 class="flex flex-col content-center">WHAT WE DO</h1>
+            <p>
+              Hlokomela’s services and projects are focussed into three main
+              areas of priority; Healthcare, Income Development Projects &
+              Administration.
+            </p>
+            <img src={whatwedo} alt="what we do chart" class="pt-20" />
           </div>
-          <div class="bg-gray-500 md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-            <section aria-label="Blog post list">
-              {allMedia.map((p) => <BlogPostPreview post={p} />)}
-            </section>
+          <div class="bg-sky-100 flex flex-col content-center pt-5">
+            <img src={healthsocial} alt="mission icon" />
+            <h1>HEALTH & SOCIAL PROGRAMMES</h1>
+            <p>
+              Our health and social care programmes offer biomedical, social and
+              structural interventions to reduce HIV, TB and STIs. Our services
+              cover the continuum of care ranging from combination prevention to
+              treatment and retention as well as sexual and reproductive health.
+              Social programmes include psychosocial support and programmes to
+              reduce gender based violence and human rights violations.
+            </p>
           </div>
-        </div>
+          <div class="flex flex-col content-center pt-20 pb-20">
+            <h1>WHERE WE WORK</h1>
+            <p>
+              Our health and social care programmes offer biomedical, social and
+              structural interventions to reduce HIV, TB and STIs. Our services
+              cover the continuum of care ranging from combination prevention to
+              treatment and retention as well as sexual and reproductive health.
+              Social programmes include psychosocial support and programmes to
+              reduce gender based violence and human rights violations.
+            </p>
+            <img src={wherewework} alt="where we work map" />
+          </div>
+          <div class="flex flex-col content-center pt-5 pb-20">
+            <h1>WHO WE SERVE</h1>
+            <p>
+              Farms in the Mopani District not only employ permanent workers,
+              but also a large number of seasonal workers during picking
+              seasons. Many of these seasonal workers are migrants from other
+              areas of South Africa, Mozambique, Zimbabwe, and elsewhere in
+              Southern Africa. Hlokomela currently provides services to workers
+              and their families on 71 sub project sites in the Hoedspruit
+              community, as well as to a number of employees on private nature
+              reserves adjacent to the Kruger National Park. An estimated 25 000
+              farm workers and their families benefit directly from Hlokomela
+              services. Each month, Hlokomela helps approximately 1 700 clients
+              access HIV Testing Services (HTS), and helps 2 000 people living
+              with HIV receive antiretroviral therapy (ART) at three Wellness
+              Clinic sites and 7 mobile sites (Hlokomela, Bavaria, Richmond,
+              Klaserie Private Nature Reserve, Ngala, Thornybush Waterside,
+              South African Wildlife College, Singita Lebombo, Phelwana and
+              Timbavati Foundation). Hlokomela’s public awareness campaigns
+              provide information about HIV and AIDS to the entire community.
+            </p>
+            <img src={whoweserve} alt="who we serve image" class="pt-5" />
+          </div>
+          <div class="flex flex-col content-center">
+            <h1>OUR PARTNERS</h1>
+            <img src={partners} alt="partners image" />
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
