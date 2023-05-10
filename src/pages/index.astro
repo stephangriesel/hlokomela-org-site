@@ -2,7 +2,6 @@
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config';
 
@@ -14,10 +13,6 @@ import wherewework from '../images/wherewework.png';
 import whoweserve from '../images/whoweserve.jpg';
 import partners from '../images/partners.jpg';
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
 let { title } = SITE;
 let description = 'The perfect starter for your perfect blog.';
 let permalink = 'https://example.com/';
@@ -37,48 +32,11 @@ allMedia = allMedia.sort(
     new Date(b.frontmatter.publishDate).valueOf() -
     new Date(a.frontmatter.publishDate).valueOf()
 );
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <html lang="en">
   <head>
     <BaseHead {title} {description} {permalink} />
-
-    <style>
-      header {
-        width: 100%;
-        height: 100%;
-        background-color: var(--theme-bg-offset);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .content {
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-      }
-
-      .content :global(main > * + *) {
-        margin-top: 1rem;
-      }
-
-      .intro {
-        padding-bottom: 4rem;
-        margin-bottom: 2rem;
-        border-bottom: 4px solid var(--theme-divider);
-      }
-
-      .intro > * {
-        margin: 0;
-      }
-
-      footer {
-        text-align: center;
-      }
-    </style>
   </head>
 
   <body>
@@ -86,8 +44,8 @@ allMedia = allMedia.sort(
     <div class="wrapper">
       <main class="content">
         <section class="intro">
-          <div class="flex flex-col content-center pt-5 pb-20">
-            <h1>WHO WE ARE</h1>
+          <div class="flex flex-col content-center pt-20 pb-20">
+            <h2 class="font-bold">WHO WE ARE</h2>
             <p>
               Hlokomela was established in 2005 in response to research that
               highlighted a critical need for health care among farm workers and
@@ -98,7 +56,7 @@ allMedia = allMedia.sort(
             </p>
           </div>
           <div class="flex flex-col content-center pt-5 pb-20">
-            <h1>WHO WE BECAME</h1>
+            <h2 class="font-bold">WHO WE BECAME</h2>
             <p>
               In 2020, faced with the COVID-19 pandemic, Hlokomela capitalised
               on its identity which has been built up over 15 years of caring.
@@ -119,7 +77,7 @@ allMedia = allMedia.sort(
               class="bg-amber-950 md:w-1/2 flex flex-col content-center align-center justify-center h-96 w-96 p-5"
             >
               <img src={vision} class="h-24" alt="vision icon" />
-              <h1 class="text-white">OUR VISION</h1>
+              <h2 class="text-white font-bold">OUR VISION</h2>
               <p class="text-white">
                 Create a culture of caring that empowers all
               </p>
@@ -128,7 +86,7 @@ allMedia = allMedia.sort(
               class="bg-[#5db1bd] md:w-1/2 flex flex-col content-center align-center justify-center h-96 w-96 p-5"
             >
               <img src={mission} alt="mission icon" />
-              <h1 class="text-white">OUR MISSION</h1>
+              <h2 class="text-white font-bold">OUR MISSION</h2>
               <p class="text-white">
                 To provide quality, all-inclusive health care to everyone in the
                 Kruger2Canyons Biosphere Region
@@ -136,7 +94,7 @@ allMedia = allMedia.sort(
             </div>
           </div>
           <div class="pt-5 pb-20">
-            <h1 class="flex flex-col content-center">WHAT WE DO</h1>
+            <h2 class="flex flex-col content-center font-bold">WHAT WE DO</h2>
             <p>
               Hlokomela’s services and projects are focussed into three main
               areas of priority; Healthcare, Income Development Projects &
@@ -144,9 +102,11 @@ allMedia = allMedia.sort(
             </p>
             <img src={whatwedo} alt="what we do chart" class="pt-20" />
           </div>
-          <div class="bg-sky-100 flex flex-col content-center pt-5">
+          <div
+            class="bg-sky-100 flex flex-col content-center pt-5 pl-10 pr-10 pb-10"
+          >
             <img src={healthsocial} alt="mission icon" />
-            <h1>HEALTH & SOCIAL PROGRAMMES</h1>
+            <h2 class="font-bold">HEALTH & SOCIAL PROGRAMMES</h2>
             <p>
               Our health and social care programmes offer biomedical, social and
               structural interventions to reduce HIV, TB and STIs. Our services
@@ -157,7 +117,7 @@ allMedia = allMedia.sort(
             </p>
           </div>
           <div class="flex flex-col content-center pt-20 pb-20">
-            <h1>WHERE WE WORK</h1>
+            <h2 class="font-bold">WHERE WE WORK</h2>
             <p>
               Our health and social care programmes offer biomedical, social and
               structural interventions to reduce HIV, TB and STIs. Our services
@@ -169,7 +129,7 @@ allMedia = allMedia.sort(
             <img src={wherewework} alt="where we work map" />
           </div>
           <div class="flex flex-col content-center pt-5 pb-20">
-            <h1>WHO WE SERVE</h1>
+            <h2 class="font-bold">WHO WE SERVE</h2>
             <p>
               Farms in the Mopani District not only employ permanent workers,
               but also a large number of seasonal workers during picking
@@ -191,8 +151,8 @@ allMedia = allMedia.sort(
             </p>
             <img src={whoweserve} alt="who we serve image" class="pt-5" />
           </div>
-          <div class="flex flex-col content-center">
-            <h1>OUR PARTNERS</h1>
+          <div class="flex flex-col content-center pb-20">
+            <h2 class="font-bold">OUR PARTNERS</h2>
             <img src={partners} alt="partners image" />
           </div>
         </section>
