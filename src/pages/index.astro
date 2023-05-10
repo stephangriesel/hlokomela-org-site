@@ -12,6 +12,7 @@ import healthsocial from '../images/healthsocial.png';
 import wherewework from '../images/wherewework.png';
 import whoweserve from '../images/whoweserve.jpg';
 import partners from '../images/partners.jpg';
+import beautifulnews from '../images/beautifulnews.jpg';
 
 let { title } = SITE;
 let description = 'The perfect starter for your perfect blog.';
@@ -151,9 +152,18 @@ allMedia = allMedia.sort(
             </p>
             <img src={whoweserve} alt="who we serve image" class="pt-5" />
           </div>
-          <div class="flex flex-col content-center pb-20">
+          <div
+            class="flex flex-col content-center pb-20 border-b-26 border-[#5DB1BC]"
+          >
             <h2 class="font-bold">OUR PARTNERS</h2>
             <img src={partners} alt="partners image" />
+          </div>
+          <div class="flex flex-col content-center pt-20 pb-20">
+            <a
+              href="https://www.beautifulnews.com/bringing-dignity-back-our-farming-communities"
+            >
+              <img src={beautifulnews} alt="partners image" />
+            </a>
           </div>
         </section>
       </main>
