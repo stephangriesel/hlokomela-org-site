@@ -4,8 +4,6 @@ import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import Footer from '../components/Footer.astro';
 
-import Map from '../components/Map.astro';
-
 import { SITE } from '../config';
 
 let { title } = SITE;
@@ -22,16 +20,51 @@ let permalink = 'https://www.hlokomela.org.za/';
   <body>
     <BlogHeader />
     <div class="wrapper">
-      <main class="content">
+      <main class="flex flex-col justify-center">
         <section class="intro">
           <h1 class="latest">{title}</h1>
           <p>{description}</p>
         </section>
-        <div class="flex flex-col md:flex-row justify-center">
-          <Map />
-        </div>
+        <section class="flex flex-col md:flex-row" aria-label="Contact">
+          <div class="flex flex-col m-5">
+            <h2>MAIN OFFICE</h2>
+            <strong>Address:</strong>
+            <p>Richgate farm,</p>
+            <p>Unifrutti, Hoedspruit,</p>
+            <p>1380</p>
+            <strong>Telephone:</strong>
+            <p>082 560 0248</p>
+            <strong>Hours:</strong>
+            <p>Mon-Fri 07:30 – 16:00</p>
+          </div>
+          <div aria-label="Form">
+            <h2>GENERAL INQUIRIES</h2>
+            <form
+              action="https://form.taxi/s/coeb174p"
+              method="POST"
+              class="flex flex-col m-5"
+            >
+              <input type="text" name="Name" />
+              <input type="email" name="Email" />
+              <textarea name="Message"></textarea>
+              <input type="submit" value="Send" />
+            </form>
+          </div>
+        </section>
+        <section aria-label="Map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.3553198802683!2d30.786878676345726!3d-24.403720493080645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec306b677284535%3A0x9c41296732e96b2d!2sHoedspruit%20Training%20Trust!5e0!3m2!1sen!2snl!4v1683780371879!5m2!1sen!2snl"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
       </main>
-      <Footer />
     </div>
+    <Footer />
+
+    0
   </body>
 </html>
