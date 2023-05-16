@@ -3,6 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import Footer from '../components/Footer.astro';
 import { SITE } from '../config';
 
 // Component Script:
@@ -86,9 +87,7 @@ allMedia = allMedia.sort(
           </div>
         </div>
       </main>
-      <footer>
-        <a href="/admin">Admin Dashboard 🔐</a>
-      </footer>
+      <Footer />
     </div>
   </body>
 </html>
