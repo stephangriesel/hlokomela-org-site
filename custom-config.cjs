@@ -4,7 +4,11 @@ module.exports = {
 		'./node_modules/flowbite/**/*.js'
 	],
 	theme: {
-		extend: {},
+		extend: {
+      width: {
+        '128': '32rem',
+      }
+    },
 		borderWidth: {
       DEFAULT: '1px',
       '0': '0',
