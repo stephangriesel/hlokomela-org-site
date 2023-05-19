@@ -1,0 +1,53 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../config';
+
+import givengain from '../images/givengain.jpg';
+import support1 from '../images/support1.jpg';
+
+let { title } = SITE;
+let description = 'The perfect starter for your perfect blog.';
+let permalink = 'https://example.com/';
+---
+
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} {permalink} />
+
+    <style></style>
+  </head>
+
+  <body>
+    <BlogHeader />
+    <div class="wrapper">
+      <main class="content">
+        <section class="flex flex-col justify-center">
+          <div>
+            <img src={givengain} alt="givengain" />
+          </div>
+          <div class="flex flex-col md:flex-row p-5">
+            <div class="w-1/5">
+              <img src={support1} alt="support" />
+            </div>
+            <div class="w-4/5 p-5">
+              <p>
+                With the global COVID-19 pandemic now spreading quickly in South
+                Africa, local communities are feeling the devastating effects of
+                the virus. With the South African tourism industry being hit
+                hardest by the outbreak, many people have lost their jobs due to
+                the lockdown measures. We are committed to continue offering
+                health & safety support to these vulnerable communities for as
+                long as this pandemic remains, but Hlokomela needs your help to
+                do this.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
