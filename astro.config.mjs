@@ -104,6 +104,15 @@ export default defineConfig({
               { name: 'author', widget: 'string', label: 'Author Name', required: false },
               { name: 'authorURL', widget: 'string', label: 'Author URL', required: false },
               { name: 'description', widget: 'string', label: 'Description', required: false },
+              {
+                name: 'pdfFile',
+                widget: 'file',
+                label: 'PDF File',
+                required: false,
+                media_folder: 'static/uploads',
+                public_folder: '/uploads',
+                accept: ['application/pdf'],
+              },
               { name: 'body', widget: 'markdown', label: 'Post Body' },
               {
                 name: 'layout',
@@ -114,7 +123,7 @@ export default defineConfig({
                 ],
               },
             ],
-          },
+          },          
           {
             name: 'annualreports',
             label: 'Annual Reports',
