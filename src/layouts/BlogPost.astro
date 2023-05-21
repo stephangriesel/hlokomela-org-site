@@ -2,22 +2,43 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPost from '../components/BlogPost.astro';
+import Footer from '../components/Footer.astro';
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, authorURL, heroImage, permalink, alt } = content;
+const {
+  title,
+  description,
+  publishDate,
+  author,
+  authorURL,
+  pdfFile,
+  heroImage,
+  permalink,
+  alt,
+} = content;
+console.log('content', content);
 ---
 
 <html lang={content.lang || 'en'}>
-	<head>
-		<BaseHead {title} {description} {permalink} />
-	</head>
+  <head>
+    <BaseHead {title} {description} {permalink} />
+  </head>
 
-	<body>
-		<BlogHeader />
-		<div class="wrapper">
-			<BlogPost {title} {author} {authorURL} {heroImage} {publishDate} {alt}>
-				<slot />
-			</BlogPost>
-		</div>
-	</body>
+  <body>
+    <BlogHeader />
+    <div class="wrapper">
+      <BlogPost
+        {title}
+        {author}
+        {pdfFile}
+        {authorURL}
+        {heroImage}
+        {publishDate}
+        {alt}
+      >
+        <slot />
+      </BlogPost>
+    </div>
+    <Footer />
+  </body>
 </html>
