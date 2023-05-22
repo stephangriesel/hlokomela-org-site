@@ -7,9 +7,11 @@ import { SITE } from '../config';
 
 import givengain from '../images/givengain.jpg';
 import support1 from '../images/support1.jpg';
+import globalgiving from '../images/globalgiving.jpg';
+import support2 from '../images/support2.jpg';
 
 let { title } = SITE;
-let description = 'The perfect starter for your perfect blog.';
+let description = 'The perfect starter for your perfect blog.'; // TODO: Move to head
 let permalink = 'https://example.com/';
 ---
 
@@ -33,6 +35,12 @@ let permalink = 'https://example.com/';
               <img src={support1} alt="support" />
             </div>
             <div class="w-4/5 p-5">
+              <a
+                href="https://www.givengain.com/cc/the-vulnerable-covid-19-south-africa/"
+                ><h3>
+                  Support vulnerable communities in R.S.A. against COVID-19
+                </h3></a
+              >
               <p>
                 With the global COVID-19 pandemic now spreading quickly in South
                 Africa, local communities are feeling the devastating effects of
@@ -42,6 +50,31 @@ let permalink = 'https://example.com/';
                 health & safety support to these vulnerable communities for as
                 long as this pandemic remains, but Hlokomela needs your help to
                 do this.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="flex flex-col justify-center">
+          <div>
+            <img src={globalgiving} alt="Global Giving" />
+          </div>
+          <div class="flex flex-col md:flex-row p-5">
+            <div class="w-1/5">
+              <img src={support2} alt="support" />
+            </div>
+            <div class="w-4/5 p-5">
+              <a
+                href="https://www.globalgiving.org/projects/save-women-breast-cancer-south-africa/"
+                ><h3>Save women from breast cancer in South Africa</h3></a
+              >
+              <p>
+                Limpopo is one of the worst areas in South Africa for poverty,
+                whilst lacking basic facilities in the local villages such as
+                running water. Hlokomela is an established non-profit clinic
+                committed to serving farm workers and their families. Our goal
+                is to provide a cost-effective and sustainable way to screen for
+                and treat breast cancer, preventing hundreds of deaths each
+                year.
               </p>
             </div>
           </div>
