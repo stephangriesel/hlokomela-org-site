@@ -25,6 +25,9 @@ allMedia = allMedia.sort(sortByPublishDate);
 
 let allForms = await Astro.glob('./forms/*.md');
 allForms = allForms.sort(sortByPublishDate);
+
+let allAnnualReports = await Astro.glob('./annualreports/*.md');
+allAnnualReports = allAnnualReports.sort(sortByPublishDate);
 ---
 
 <html lang="en">
@@ -74,6 +77,11 @@ allForms = allForms.sort(sortByPublishDate);
           <h1 class="latest">{title}</h1>
           <p>{description}</p>
         </section>
+        <div class="bg-gray-500 md:w-1/2 lg:w-2/3 h-64 md:h-auto">
+          <section aria-label="Blog post list">
+            {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
+          </section>
+        </div>
         <div class="flex flex-col md:flex-row">
           <div class="bg-gray-500 md:w-1/2 lg:w-2/3 h-64 md:h-auto">
             <section aria-label="Blog post list">
