@@ -11,6 +11,13 @@ let { title } = SITE;
 let description = ''; // TODO: Move to head
 let permalink = 'https://www.hlokomela.org.za/';
 
+// Images
+import kwela from '../images/kwela.jpg';
+import coverup from '../images/coverup.jpg';
+
+// Icons
+import File from '../images/icons/file.astro';
+
 // Sorting Function
 function sortByPublishDate(a, b) {
   return (
@@ -34,39 +41,7 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
   <head>
     <BaseHead {title} {description} {permalink} />
 
-    <style>
-      header {
-        width: 100%;
-        height: 100%;
-        background-color: var(--theme-bg-offset);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .content {
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-      }
-
-      .content :global(main > * + *) {
-        margin-top: 1rem;
-      }
-
-      .intro {
-        padding-bottom: 4rem;
-        margin-bottom: 2rem;
-        border-bottom: 4px solid var(--theme-divider);
-      }
-
-      .intro > * {
-        margin: 0;
-      }
-
-      footer {
-        text-align: center;
-      }
-    </style>
+    <style></style>
   </head>
 
   <body>
@@ -74,28 +49,59 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
     <div class="wrapper">
       <main class="content">
         <section class="intro">
-          <h1 class="latest">{title}</h1>
-          <p>{description}</p>
+          <div class="flex flex-col content-center pt-20 pb-20">
+            <h2 class="font-bold">PRESS & MEDIA INFORMATION</h2>
+            <a
+              href="https://www.youtube.com/watch?v=k9lxk3RGGIE&feature=youtu.be&fbclid=IwAR2vHRyTdZctrA5fL0twwNBPlvdmoYEbWQS7iZQ1W1vYwa4YO3KD2xBgD8U"
+            >
+              <img class="pl-20" src={kwela} alt="Kwela Image" />
+            </a>
+          </div>
+          <div
+            class="flex flex-col md:flex-row border-b border-gray-200 dark:border-gray-600 p-10"
+          >
+            <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
+              <section>
+                <img class="pl-20 w-[32rem]" src={coverup} alt="Cover Up" />
+              </section>
+            </div>
+            <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto pl-20 pr-20">
+              <section>
+                <ul>
+                  <li class="flex p-5">
+                    <File /> Test
+                  </li>
+                  <li class="flex p-5">
+                    <File /> Test
+                  </li>
+                  <li class="flex p-5">
+                    <File /> Test
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
         </section>
-        <div class="bg-gray-500 md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-          <section aria-label="Blog post list">
-            {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
-          </section>
-        </div>
         <div class="flex flex-col md:flex-row">
-          <div class="bg-gray-500 md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-            <section aria-label="Blog post list">
+          <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
+            <h2>MEDIA PACK</h2>
+            <section>
               {allMedia.map((p) => <BlogPostPreview post={p} />)}
             </section>
-          </div>
-          <div class="bg-gray-500 md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-            <section aria-label="Blog post list">
+            <h2>FORMS</h2>
+            <section>
               {allForms.map((p) => <BlogPostPreview post={p} />)}
+            </section>
+          </div>
+          <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
+            <h2>ANNUAL REPORTS</h2>
+            <section>
+              {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
         </div>
       </main>
-      <Footer />
     </div>
+    <Footer />
   </body>
 </html>
