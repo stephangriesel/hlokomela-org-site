@@ -84,17 +84,17 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
         </section>
         <div class="flex flex-col md:flex-row">
           <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-            <h2>MEDIA PACK</h2>
+            <h2 class="font-bold">MEDIA PACK</h2>
             <section>
               {allMedia.map((p) => <BlogPostPreview post={p} />)}
             </section>
-            <h2>FORMS</h2>
+            <h2 class="font-bold">FORMS</h2>
             <section>
               {allForms.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
           <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-            <h2>ANNUAL REPORTS</h2>
+            <h2 class="font-bold">ANNUAL REPORTS</h2>
             <section>
               {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
             </section>
