@@ -26,6 +26,11 @@ function sortByPublishDate(a, b) {
   );
 }
 
+// Static content
+import coverUpEnglish from '../static/coverupenglish.pdf';
+import coverUpSepedi from '../static/coverupsepedi.pdf';
+import coverUpXitsonga from '../static/coverupxitsonga.pdf';
+
 // Data Fetching: List all Markdown posts in the repo.
 let allMedia = await Astro.glob('./media/*.md');
 allMedia = allMedia.sort(sortByPublishDate);
@@ -49,33 +54,39 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
     <div class="wrapper">
       <main class="content">
         <section class="intro">
-          <div class="flex flex-col content-center pt-20 pb-20">
-            <h2 class="font-bold">PRESS & MEDIA INFORMATION</h2>
+          <div class="flex flex-col content-center mt-10 mb-10">
+            <h2 class="font-bold text-center">PRESS & MEDIA INFORMATION</h2>
             <a
               href="https://www.youtube.com/watch?v=k9lxk3RGGIE&feature=youtu.be&fbclid=IwAR2vHRyTdZctrA5fL0twwNBPlvdmoYEbWQS7iZQ1W1vYwa4YO3KD2xBgD8U"
             >
-              <img class="pl-20" src={kwela} alt="Kwela Image" />
+              <img class="w-[30rem]" src={kwela} alt="Kwela Image" />
             </a>
           </div>
           <div
             class="flex flex-col md:flex-row border-b border-gray-200 dark:border-gray-600 p-10"
           >
-            <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
+            <div class="md:w-1/2 lg:w-2/3 h-64 h-full md:h-auto">
               <section>
-                <img class="pl-20 w-[32rem]" src={coverup} alt="Cover Up" />
+                <img class="w-[26rem] h-full" src={coverup} alt="Cover Up" />
               </section>
             </div>
             <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto pl-20 pr-20">
               <section>
                 <ul>
-                  <li class="flex p-5">
-                    <File /> Test
+                  <li>
+                    <a class="flex p-5" href={coverUpEnglish}>
+                      <File /> 'COVER UP' - ENGLISH
+                    </a>
                   </li>
-                  <li class="flex p-5">
-                    <File /> Test
+                  <li>
+                    <a class="flex p-5" href={coverUpSepedi}>
+                      <File /> COVER UP' - SEPEDI
+                    </a>
                   </li>
-                  <li class="flex p-5">
-                    <File /> Test
+                  <li>
+                    <a class="flex p-5" href={coverUpXitsonga}>
+                      <File /> COVER UP' - XITSONGA
+                    </a>
                   </li>
                 </ul>
               </section>
