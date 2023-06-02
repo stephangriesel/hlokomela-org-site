@@ -1,4 +1,5 @@
 ---
+import FileIcon from '../images/icons/file.astro';
 export interface Props {
   post: any;
 }
@@ -6,13 +7,10 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="post-preview">
-  <header>
-    <!-- <p class="publish-date">{post.frontmatter.publishDate}</p> -->
-    <a href={post.url}><h1>{post.frontmatter.title}</h1></a>
-  </header>
-  <!-- <p>{post.frontmatter.description}</p> -->
-  <!-- <a href={post.url}>Read more</a> -->
+<article class="post-preview mt-5 mb-5 flex">
+  <FileIcon /><a href={post.url}
+    ><p class="text-xl">{post.frontmatter.title}</p></a
+  >
 </article>
 
 <style></style>
