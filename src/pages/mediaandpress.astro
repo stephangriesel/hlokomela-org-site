@@ -16,7 +16,7 @@ import kwela from '../images/kwela.jpg';
 import coverup from '../images/coverup.jpg';
 
 // Icons
-import File from '../images/icons/file.astro';
+import FileIcon from '../images/icons/file.astro';
 
 // Sorting Function
 function sortByPublishDate(a, b) {
@@ -40,6 +40,12 @@ allForms = allForms.sort(sortByPublishDate);
 
 let allAnnualReports = await Astro.glob('./annualreports/*.md');
 allAnnualReports = allAnnualReports.sort(sortByPublishDate);
+
+let allArticleLinks = await Astro.glob('./articlelinks/*.md');
+allArticleLinks = allArticleLinks.sort(sortByPublishDate);
+
+let allProjectVideos = await Astro.glob('./projectvideos/*.md');
+allProjectVideos = allProjectVideos.sort(sortByPublishDate);
 ---
 
 <html lang="en">
@@ -54,7 +60,7 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
     <div class="wrapper">
       <main class="content">
         <section class="intro">
-          <div class="flex flex-col content-center mt-10 mb-10">
+          <div class="flex flex-col content-center">
             <h2 class="font-bold text-center">PRESS & MEDIA INFORMATION</h2>
             <a
               href="https://www.youtube.com/watch?v=k9lxk3RGGIE&feature=youtu.be&fbclid=IwAR2vHRyTdZctrA5fL0twwNBPlvdmoYEbWQS7iZQ1W1vYwa4YO3KD2xBgD8U"
@@ -63,9 +69,9 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
             </a>
           </div>
           <div
-            class="flex flex-col md:flex-row border-b border-gray-200 dark:border-gray-600 p-10"
+            class="flex flex-col md:flex-row border-b border-gray-200 dark:border-gray-600"
           >
-            <div class="md:w-1/2 lg:w-2/3 h-64 h-full md:h-auto">
+            <div class="md:w-1/2 lg:w-2/3 h-64 h-full md:h-auto m-10">
               <section>
                 <img class="w-[26rem] h-full" src={coverup} alt="Cover Up" />
               </section>
@@ -75,17 +81,17 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
                 <ul>
                   <li>
                     <a class="flex p-5" href={coverUpEnglish}>
-                      <File /> 'COVER UP' - ENGLISH
+                      <FileIcon /> 'COVER UP' - ENGLISH
                     </a>
                   </li>
                   <li>
                     <a class="flex p-5" href={coverUpSepedi}>
-                      <File /> COVER UP' - SEPEDI
+                      <FileIcon /> COVER UP' - SEPEDI
                     </a>
                   </li>
                   <li>
                     <a class="flex p-5" href={coverUpXitsonga}>
-                      <File /> COVER UP' - XITSONGA
+                      <FileIcon /> COVER UP' - XITSONGA
                     </a>
                   </li>
                 </ul>
@@ -93,8 +99,8 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
             </div>
           </div>
         </section>
-        <div class="flex flex-col md:flex-row">
-          <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
+        <div class="flex flex-col md:flex-row m-10">
+          <div class="md:w-1/2 lg:w-2/3 md:h-auto">
             <h2 class="font-bold">MEDIA PACK</h2>
             <section>
               {allMedia.map((p) => <BlogPostPreview post={p} />)}
@@ -108,6 +114,20 @@ allAnnualReports = allAnnualReports.sort(sortByPublishDate);
             <h2 class="font-bold">ANNUAL REPORTS</h2>
             <section>
               {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
+            </section>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row m-10">
+          <div class="md:w-1/2 lg:w-2/3 md:h-auto">
+            <h2 class="font-bold">ARTICLE LINKS</h2>
+            <section>
+              {allArticleLinks.map((p) => <BlogPostPreview post={p} />)}
+            </section>
+          </div>
+          <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
+            <h2 class="font-bold">PROJECT VIDEOS</h2>
+            <section>
+              {allProjectVideos.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
         </div>
