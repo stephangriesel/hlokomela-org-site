@@ -60,12 +60,12 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
     <div class="wrapper">
       <main class="content">
         <section class="intro">
-          <div class="flex flex-col content-center">
-            <h2 class="font-bold text-center">PRESS & MEDIA INFORMATION</h2>
+          <div class="flex flex-col content-center m-10">
+            <h2 class="font-bold">PRESS & MEDIA INFORMATION</h2>
             <a
               href="https://www.youtube.com/watch?v=k9lxk3RGGIE&feature=youtu.be&fbclid=IwAR2vHRyTdZctrA5fL0twwNBPlvdmoYEbWQS7iZQ1W1vYwa4YO3KD2xBgD8U"
             >
-              <img class="w-[30rem]" src={kwela} alt="Kwela Image" />
+              <img class="w-[50rem]" src={kwela} alt="Kwela Image" />
             </a>
           </div>
           <div
@@ -80,17 +80,17 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
               <section>
                 <ul>
                   <li>
-                    <a class="flex p-5" href={coverUpEnglish}>
+                    <a class="flex p-5 text-xl" href={coverUpEnglish}>
                       <FileIcon /> 'COVER UP' - ENGLISH
                     </a>
                   </li>
                   <li>
-                    <a class="flex p-5" href={coverUpSepedi}>
+                    <a class="flex p-5 text-xl" href={coverUpSepedi}>
                       <FileIcon /> COVER UP' - SEPEDI
                     </a>
                   </li>
                   <li>
-                    <a class="flex p-5" href={coverUpXitsonga}>
+                    <a class="flex p-5 text-xl" href={coverUpXitsonga}>
                       <FileIcon /> COVER UP' - XITSONGA
                     </a>
                   </li>
@@ -99,37 +99,35 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
             </div>
           </div>
         </section>
-        <div class="flex flex-col md:flex-row m-10">
+        <div class="flex flex-col md:flex-row m-0 mt-10">
           <div class="md:w-1/2 lg:w-2/3 md:h-auto">
-            <h2 class="font-bold">MEDIA PACK</h2>
+            <h2 class="font-bold text-center md:text-left">MEDIA PACK</h2>
             <section>
               {allMedia.map((p) => <BlogPostPreview post={p} />)}
             </section>
-            <h2 class="font-bold">FORMS</h2>
+            <h2 class="font-bold text-center md:text-left">FORMS</h2>
             <section>
               {allForms.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
-          <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-            <h2 class="font-bold">ANNUAL REPORTS</h2>
+          <div class="md:w-1/2 lg:w-2/3 md:h-auto">
+            <h2 class="font-bold text-center md:text-left">ANNUAL REPORTS</h2>
             <section>
               {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row m-10">
-          <div class="md:w-1/2 lg:w-2/3 md:h-auto">
-            <h2 class="font-bold">ARTICLE LINKS</h2>
-            <section>
-              {allArticleLinks.map((p) => <BlogPostPreview post={p} />)}
-            </section>
-          </div>
-          <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto">
-            <h2 class="font-bold">PROJECT VIDEOS</h2>
-            <section>
-              {allProjectVideos.map((p) => <BlogPostPreview post={p} />)}
-            </section>
-          </div>
+        <div class="md:w-1/2 lg:w-2/3 md:h-auto">
+          <h2 class="font-bold text-center md:text-left">ARTICLE LINKS</h2>
+          <section>
+            {allArticleLinks.map((p) => <BlogPostPreview post={p} />)}
+          </section>
+        </div>
+        <div class="md:w-1/2 lg:w-2/3 md:h-auto">
+          <h2 class="font-bold text-center md:text-left">PROJECT VIDEOS</h2>
+          <section>
+            {allProjectVideos.map((p) => <BlogPostPreview post={p} />)}
+          </section>
         </div>
       </main>
     </div>

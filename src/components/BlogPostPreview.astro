@@ -7,7 +7,7 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="post-preview mt-5 mb-5 flex">
+<article class="post-preview mt-5 mb-5 flex md:justify-start justify-center">
   <FileIcon /><a href={post.url}
     ><p class="text-xl">{post.frontmatter.title}</p></a
   >
