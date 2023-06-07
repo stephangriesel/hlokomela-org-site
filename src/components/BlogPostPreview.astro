@@ -5,12 +5,17 @@ export interface Props {
 }
 
 const { post } = Astro.props;
+console.log('post', post.frontmatter.pdfFile);
 ---
 
 <article class="post-preview mt-5 mb-5 flex md:justify-start justify-center">
   <FileIcon /><a href={post.url}
-    ><p class="text-xl">{post.frontmatter.title}</p></a
-  >
-</article>
+    ><a href={post.frontmatter.pdfFile}
+      ><p class="text-xl">
+        {post.frontmatter.title}
+      </p></a
+    >
+  </a>
 
-<style></style>
+  <style></style>
+</article>
