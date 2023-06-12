@@ -109,7 +109,7 @@ export default defineConfig({
                 widget: 'file',
                 label: 'PDF File',
                 required: false,
-                media_folder: 'upload',
+                media_folder: 'static/upload',
                 public_folder: '/upload',
                 accept: ['application/pdf'],
               },
