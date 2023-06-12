@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import NetlifyCMS from 'astro-netlify-cms';
 import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     tailwind({
@@ -12,15 +11,12 @@ export default defineConfig({
     }),
     NetlifyCMS({
       config: {
-        // Use Netlify’s “Git Gateway” authentication and target our default branch
         backend: {
           name: 'git-gateway',
           branch: 'latest',
         },
-        // Configure where our media assets are stored & served from
-        media_folder: 'public/assets/blog',
-        public_folder: '/assets/blog',
-        // Configure the content collections
+        media_folder: 'public/upload',
+        public_folder: '/upload',
         collections: [
           {
             name: 'posts',
@@ -109,8 +105,6 @@ export default defineConfig({
                 widget: 'file',
                 label: 'PDF File',
                 required: false,
-                media_folder: 'static/upload',
-                public_folder: '/upload',
                 accept: ['application/pdf'],
               },
               { name: 'body', widget: 'markdown', label: 'Post Body' },
@@ -149,8 +143,6 @@ export default defineConfig({
                 widget: 'file',
                 label: 'PDF File',
                 required: false,
-                media_folder: 'upload',
-                public_folder: '/upload',
                 accept: ['application/pdf'],
               },
               { name: 'body', widget: 'markdown', label: 'Post Body' },
