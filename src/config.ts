@@ -1,3 +1,3 @@
 export const SITE = {
-  title: 'Astro Blog with Netlify CMS',
+  title: 'Hlokomela - Award winning HIV and AIDS educational and treatment programme in Limpopo and Mpumalanga South Africa',
 };
