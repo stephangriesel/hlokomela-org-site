@@ -7,4 +7,4 @@
 | `pnpm run build`   | Build your production site to `./dist/`            |
 | `pnpm run preview` | Serve `./dist/` & run the Netlify CMS proxy server |  
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/11684a96-2105-4e8d-944a-1588ee119a84/deploy-status)](https://app.netlify.com/sites/silver-elf-5e6eb2/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e978193f-d2ba-4e76-a52a-0da79fadca89/deploy-status)](https://app.netlify.com/sites/hlokomela/deploys)
