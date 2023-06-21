@@ -17,6 +17,7 @@ export default defineConfig({
         },
         media_folder: 'public/upload',
         public_folder: '/upload',
+        logo_url: `https://res.cloudinary.com/dvme554nj/image/upload/v1687318146/logo_cqhhz9.png`,
         collections: [
           {
             name: 'media',
