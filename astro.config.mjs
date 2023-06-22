@@ -45,7 +45,7 @@ export default defineConfig({
                 widget: 'select',
                 default: '../../layouts/BlogPost.astro',
                 options: [
-                  { label: 'Media Post', value: '../../layouts/BlogPost.astro' },
+                  { label: 'General', value: '../../layouts/BlogPost.astro' },
                 ],
               },
             ],
@@ -83,7 +83,7 @@ export default defineConfig({
                 widget: 'select',
                 default: '../../layouts/BlogPost.astro',
                 options: [
-                  { label: 'Forms', value: '../../layouts/BlogPost.astro' },
+                  { label: 'General', value: '../../layouts/BlogPost.astro' },
                 ],
               },
             ],
@@ -121,7 +121,7 @@ export default defineConfig({
                 widget: 'select',
                 default: '../../layouts/BlogPost.astro',
                 options: [
-                  { label: 'Forms', value: '../../layouts/BlogPost.astro' },
+                  { label: 'General', value: '../../layouts/BlogPost.astro' },
                 ],
               },
             ],
@@ -152,7 +152,7 @@ export default defineConfig({
                 widget: 'select',
                 default: '../../layouts/BlogPost.astro',
                 options: [
-                  { label: 'Forms', value: '../../layouts/BlogPost.astro' },
+                  { label: 'General', value: '../../layouts/BlogPost.astro' },
                 ],
               },
             ],
@@ -183,7 +183,7 @@ export default defineConfig({
                 widget: 'select',
                 default: '../../layouts/BlogPost.astro',
                 options: [
-                  { label: 'Forms', value: '../../layouts/BlogPost.astro' },
+                  { label: 'General', value: '../../layouts/BlogPost.astro' },
                 ],
               },
             ],
