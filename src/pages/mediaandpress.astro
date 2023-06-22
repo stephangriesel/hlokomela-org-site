@@ -72,7 +72,7 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
           <div
             class="flex flex-col md:flex-row border-b border-gray-200 dark:border-gray-600"
           >
-            <div class="md:w-1/2 lg:w-2/3 h-64 h-full md:h-auto m-10">
+            <div class="md:w-1/2 lg:w-2/3 h-64 h-full md:h-auto mb-10">
               <section>
                 <img class="w-[26rem] h-full" src={coverup} alt="Cover Up" />
               </section>
@@ -100,8 +100,10 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
             </div>
           </div>
         </section>
-        <div class="flex flex-col md:flex-row mt-10">
-          <div class="md:w-1/2 lg:w-2/3 md:h-auto">
+        <div
+          class="flex flex-col md:flex-row mt-10 border-b border-gray-200 dark:border-gray-600"
+        >
+          <div class="md:w-1/2 lg:w-2/3 md:h-auto m-10">
             <h3 class="font-bold text-center md:text-left">MEDIA PACK</h3>
             <section>
               {allMedia.map((p) => <BlogPostPreview post={p} />)}
@@ -111,24 +113,26 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
               {allForms.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
-          <div class="md:w-1/2 lg:w-2/3 md:h-auto">
+          <div class="md:w-1/2 lg:w-2/3 md:h-auto mb-10">
             <h3 class="font-bold text-center md:text-left">ANNUAL REPORTS</h3>
             <section>
               {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
         </div>
-        <div class="md:w-1/2 lg:w-2/3 md:h-auto">
-          <h3 class="font-bold text-center md:text-left">ARTICLE LINKS</h3>
-          <section>
-            {allArticleLinks.map((p) => <BlogPostPreview post={p} />)}
-          </section>
-        </div>
-        <div class="md:w-1/2 lg:w-2/3 md:h-auto">
-          <h3 class="font-bold text-center md:text-left">PROJECT VIDEOS</h3>
-          <section>
-            {allProjectVideos.map((p) => <BlogPostPreview post={p} />)}
-          </section>
+        <div class="flex flex-col md:flex-row mt-10">
+          <div class="md:w-1/2 lg:w-2/3 md:h-auto m-10">
+            <h3 class="font-bold text-center md:text-left">ARTICLE LINKS</h3>
+            <section>
+              {allArticleLinks.map((p) => <BlogPostPreview post={p} />)}
+            </section>
+          </div>
+          <div class="md:w-1/2 lg:w-2/3 md:h-auto">
+            <h3 class="font-bold text-center md:text-left">PROJECT VIDEOS</h3>
+            <section>
+              {allProjectVideos.map((p) => <BlogPostPreview post={p} />)}
+            </section>
+          </div>
         </div>
       </main>
     </div>
