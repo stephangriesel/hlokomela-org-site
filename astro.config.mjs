@@ -168,13 +168,6 @@ export default defineConfig({
               { name: 'title', widget: 'string', label: 'Post Title' },
               { name: 'embeddedVideo', widget: 'markdown', label: 'Embedded Video' },
               {
-                name: 'pdfFile',
-                widget: 'file',
-                label: 'PDF File',
-                required: false,
-                accept: ['application/pdf'],
-              },
-              {
                 name: 'layout',
                 widget: 'select',
                 default: '../../layouts/BlogPost.astro',
