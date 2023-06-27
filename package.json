@@ -10,10 +10,12 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astro-community/astro-embed-youtube": "^0.2.2",
     "astro": "1.9.2"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.1",
+    "astro-embed": "^0.2.1",
     "astro-netlify-cms": "^0.5.2",
     "flowbite": "^1.6.5",
     "tailwindcss": "^3.3.2"
