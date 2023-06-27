@@ -166,7 +166,7 @@ export default defineConfig({
             delete: true,
             fields: [
               { name: 'title', widget: 'string', label: 'Post Title' },
-              { name: 'embeddedVideo', widget: 'markdown', label: 'Embedded Video' },
+              { name: 'embeddedVideo', widget: 'string', label: 'YouTube ID' },
               {
                 name: 'layout',
                 widget: 'select',
