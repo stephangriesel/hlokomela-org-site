@@ -1,0 +1,13 @@
+---
+import FileIcon from '../images/icons/file.astro';
+export interface Props {
+  post: any;
+}
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+const { post } = Astro.props;
+---
+
+<article class="mt-5 mb-5 justify-center">
+  <YouTube id={post.frontmatter.embeddedVideo} />
+</article>
