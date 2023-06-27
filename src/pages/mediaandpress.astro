@@ -3,6 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import ProjectVideoPreview from '../components/ProjectVideoPreview.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config';
 
@@ -130,7 +131,7 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
           <div class="md:w-1/2 lg:w-2/3 md:h-auto">
             <h3 class="font-bold text-center md:text-left">PROJECT VIDEOS</h3>
             <section>
-              {allProjectVideos.map((p) => <BlogPostPreview post={p} />)}
+              {allProjectVideos.map((p) => <ProjectVideoPreview post={p} />)}
             </section>
           </div>
         </div>
