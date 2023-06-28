@@ -36,6 +36,13 @@ export default defineConfig({
                 time_format: false,
                 label: 'Publish Date',
               },
+              {
+                name: 'pdfFile',
+                widget: 'file',
+                label: 'PDF File',
+                required: false,
+                accept: ['application/pdf'],
+              },
               { name: 'author', widget: 'string', label: 'Author Name', required: false },
               { name: 'authorURL', widget: 'string', label: 'Author URL', required: false },
               { name: 'description', widget: 'string', label: 'Description', required: false },
