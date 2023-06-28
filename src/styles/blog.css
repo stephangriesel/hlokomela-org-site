@@ -132,9 +132,9 @@ h2 {
 	font-size: clamp(2.074rem, 1.707rem + 0.9175vw, 2.441rem);
 }
 
-h3 {
+/* h3 {
 	font-size: clamp(1.728rem, 1.503rem + 0.5625vw, 1.953rem);
-}
+} */
 
 h4 {
 	font-size: clamp(1.44rem, 1.317rem + 0.3075vw, 1.563rem);
