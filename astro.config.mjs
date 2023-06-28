@@ -106,7 +106,7 @@ export default defineConfig({
             delete: true,
             fields: [
               { name: 'title', widget: 'string', label: 'Post Title' },
-              { name: 'link', widget: 'string', label: 'link' },
+              { name: 'link', widget: 'string', label: 'Article Link' },
               {
                 name: 'layout',
                 widget: 'select',
