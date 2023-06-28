@@ -10,4 +10,5 @@ const { post } = Astro.props;
 
 <article class="mt-5 mb-5 justify-center">
   <YouTube id={post.frontmatter.embeddedVideo} />
+  {post.frontmatter.title}
 </article>
