@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 import ProjectVideoPreview from '../components/ProjectVideoPreview.astro';
+import ArticleLinksPreview from '../components/ArticleLinksPreview.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config';
 
@@ -78,7 +79,7 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
                 <img class="w-[26rem] h-full" src={coverup} alt="Cover Up" />
               </section>
             </div>
-            <div class="md:w-1/2 lg:w-2/3 h-64 md:h-auto pl-20 pr-20">
+            <div class="md:w-1/2 lg:w-2/3 md:h-auto pl-20 pr-20 m-10">
               <section>
                 <ul>
                   <li>
@@ -105,17 +106,21 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
           class="flex flex-col md:flex-row mt-10 border-b border-gray-200 dark:border-gray-600"
         >
           <div class="md:w-1/2 lg:w-2/3 md:h-auto m-10">
-            <h3 class="font-bold text-center md:text-left">MEDIA PACK</h3>
+            <h3 class="text-3xl font-bold text-center md:text-left">
+              MEDIA PACK
+            </h3>
             <section>
               {allMedia.map((p) => <BlogPostPreview post={p} />)}
             </section>
-            <h3 class="font-bold text-center md:text-left">FORMS</h3>
+            <h3 class="text-3xl font-bold text-center md:text-left">FORMS</h3>
             <section>
               {allForms.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
           <div class="md:w-1/2 lg:w-2/3 md:h-auto mb-10">
-            <h3 class="font-bold text-center md:text-left">ANNUAL REPORTS</h3>
+            <h3 class="text-3xl font-bold text-center md:text-left">
+              ANNUAL REPORTS
+            </h3>
             <section>
               {allAnnualReports.map((p) => <BlogPostPreview post={p} />)}
             </section>
@@ -123,13 +128,17 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
         </div>
         <div class="flex flex-col md:flex-row mt-10">
           <div class="md:w-1/2 lg:w-2/3 md:h-auto m-10">
-            <h3 class="font-bold text-center md:text-left">ARTICLE LINKS</h3>
+            <h3 class="text-3xl font-bold text-center md:text-left">
+              ARTICLE LINKS
+            </h3>
             <section>
-              {allArticleLinks.map((p) => <BlogPostPreview post={p} />)}
+              {allArticleLinks.map((p) => <ArticleLinksPreview post={p} />)}
             </section>
           </div>
           <div class="md:w-1/2 lg:w-2/3 md:h-auto">
-            <h3 class="font-bold text-center md:text-left">PROJECT VIDEOS</h3>
+            <h3 class="text-3xl font-bold text-center md:text-left">
+              PROJECT VIDEOS
+            </h3>
             <section>
               {allProjectVideos.map((p) => <ProjectVideoPreview post={p} />)}
             </section>
