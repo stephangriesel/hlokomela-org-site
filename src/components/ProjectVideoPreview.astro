@@ -8,7 +8,7 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 const { post } = Astro.props;
 ---
 
-<article class="mt-5 mb-5 justify-center">
+<article class="mt-5 mb-5 justify-center w-[392px]">
   <YouTube id={post.frontmatter.embeddedVideo} />
-  {post.frontmatter.title}
+  <p class="text-sm">{post.frontmatter.title}</p>
 </article>
