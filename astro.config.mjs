@@ -22,7 +22,7 @@ export default defineConfig({
           {
             name: 'media',
             label: 'Media',
-            label_singular: 'Blog Post',
+            label_singular: 'Media Post',
             folder: 'src/pages/media',
             create: true,
             delete: true,
@@ -49,7 +49,7 @@ export default defineConfig({
           {
             name: 'forms',
             label: 'Forms',
-            label_singular: 'Forms',
+            label_singular: 'Form Post',
             folder: 'src/pages/forms',
             create: true,
             delete: true,
@@ -76,7 +76,7 @@ export default defineConfig({
           {
             name: 'annualreports',
             label: 'Annual Reports',
-            label_singular: 'Annual Reports',
+            label_singular: 'Annual Report',
             folder: 'src/pages/annualreports',
             create: true,
             delete: true,
