@@ -22,7 +22,7 @@ export default defineConfig({
           {
             name: 'media',
             label: 'Media',
-            label_singular: 'Blog Post',
+            label_singular: 'New Media Post',
             folder: 'src/pages/media',
             create: true,
             delete: true,
