@@ -1,5 +1,5 @@
 ---
-title: NISBOERE - VIA - DSTV (2018) - AFRIKAANS
+title: 2018 - NISBOERE - VIA - DSTV - AFRIKAANS
 embeddedVideo: UeKeVhWbQEE
 layout: ../../layouts/BlogPost.astro
 ---
