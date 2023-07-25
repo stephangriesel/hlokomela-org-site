@@ -1,5 +1,5 @@
 ---
-title: HLOKOMELA DAY TOUR - DARLING LAMA PRODUCTIONS (2020) - ENGLISH
+title: 2020 - HLOKOMELA DAY TOUR - DARLING LAMA PRODUCTIONS - ENGLISH
 embeddedVideo: 6MeCbl6PoHo
 layout: ../../layouts/BlogPost.astro
 ---
