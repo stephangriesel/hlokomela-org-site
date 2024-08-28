@@ -1,25 +1,25 @@
 ---
 // Component Imports
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
-import ProjectVideoPreview from '../components/ProjectVideoPreview.astro';
-import ArticleLinksPreview from '../components/ArticleLinksPreview.astro';
-import Footer from '../components/Footer.astro';
-import { SITE } from '../config';
+import BaseHead from "../components/BaseHead.astro";
+import BlogHeader from "../components/BlogHeader.astro";
+import BlogPostPreview from "../components/BlogPostPreview.astro";
+import ProjectVideoPreview from "../components/ProjectVideoPreview.astro";
+import ArticleLinksPreview from "../components/ArticleLinksPreview.astro";
+import Footer from "../components/Footer.astro";
+import { SITE } from "../config";
 
 // Component Script
 let { title } = SITE;
 let description =
-  'Reducing HIV vulnerability through peer education, raising of awareness, prevention and treatment in Limpopo and Mpumalanga, South Africa.';
-let permalink = 'https://www.hlokomela.org.za/';
+  "Reducing HIV vulnerability through peer education, raising of awareness, prevention and treatment in Limpopo and Mpumalanga, South Africa.";
+let permalink = "https://www.hlokomela.org.za/";
 
 // Images
-import kwela from '../images/kwela.jpg';
-import coverup from '../images/coverup.jpg';
+import kwela from "../images/kwela.jpg";
+import coverup from "../images/coverup.jpg";
 
 // Icons
-import FileIcon from '../images/icons/file.astro';
+import FileIcon from "../images/icons/file.astro";
 
 // Sorting Function
 function sortByPublishDate(a, b) {
@@ -30,24 +30,21 @@ function sortByPublishDate(a, b) {
 }
 
 // Static content
-import coverUpEnglish from '../static/coverupenglish.pdf';
-import coverUpSepedi from '../static/coverupsepedi.pdf';
-import coverUpXitsonga from '../static/coverupxitsonga.pdf';
+import coverUpEnglish from "../static/coverupenglish.pdf";
+import coverUpSepedi from "../static/coverupsepedi.pdf";
+import coverUpXitsonga from "../static/coverupxitsonga.pdf";
 
 // Data Fetching: List all Markdown posts in the repo.
-let allMedia = await Astro.glob('./media/*.md');
+let allMedia = await Astro.glob("./media/*.md");
 allMedia = allMedia.sort(sortByPublishDate);
 
-let allForms = await Astro.glob('./forms/*.md');
-allForms = allForms.sort(sortByPublishDate);
-
-let allAnnualReports = await Astro.glob('./annualreports/*.md');
+let allAnnualReports = await Astro.glob("./annualreports/*.md");
 allAnnualReports = allAnnualReports.sort(sortByPublishDate);
 
-let allArticleLinks = await Astro.glob('./articlelinks/*.md');
+let allArticleLinks = await Astro.glob("./articlelinks/*.md");
 allArticleLinks = allArticleLinks.sort(sortByPublishDate);
 
-let allProjectVideos = await Astro.glob('./projectvideos/*.md');
+let allProjectVideos = await Astro.glob("./projectvideos/*.md");
 allProjectVideos = allProjectVideos.sort(sortByPublishDate);
 ---
 
@@ -120,12 +117,6 @@ allProjectVideos = allProjectVideos.sort(sortByPublishDate);
             </h3>
             <section>
               {allMedia.map((p) => <BlogPostPreview post={p} />)}
-            </section>
-            <h3 class="text-3xl font-bold text-center md:text-left md:pt-5">
-              FORMS
-            </h3>
-            <section>
-              {allForms.map((p) => <BlogPostPreview post={p} />)}
             </section>
           </div>
           <div class="md:w-1/2 lg:w-2/3 md:h-auto mb-10">
