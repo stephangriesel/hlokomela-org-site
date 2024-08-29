@@ -47,6 +47,33 @@ export default defineConfig({
             ],
           },
           {
+            name: "forms",
+            label: "Forms",
+            label_singular: "Form Post",
+            folder: "src/pages/forms",
+            create: true,
+            delete: true,
+            sortable_fields: ["commit_date", "title", "language.en"],
+            fields: [
+              { name: "title", widget: "string", label: "Post Title" },
+              {
+                name: "pdfFile",
+                widget: "file",
+                label: "PDF File",
+                required: false,
+                accept: ["application/pdf"],
+              },
+              {
+                name: "layout",
+                widget: "select",
+                default: "../../layouts/BlogPost.astro",
+                options: [
+                  { label: "General", value: "../../layouts/BlogPost.astro" },
+                ],
+              },
+            ],
+          },
+          {
             name: "annualreports",
             label: "Annual Reports",
             label_singular: "Annual Report",

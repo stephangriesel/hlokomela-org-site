@@ -9,13 +9,11 @@ console.log("post", post.frontmatter.pdfFile);
 ---
 
 <article class="post-preview mt-5 mb-5 flex md:justify-start justify-center">
-  {
-    post && post.frontmatter && (
-      <a href={post.url}>
-        <p class="text-xl md:hover:text-[#5db1bd]">{post.frontmatter.title}</p>
-      </a>
-    )
-  }
-
-  {!post || (!post.frontmatter && <p>n/a</p>)}
+  <FileIcon /><a href={post.url}
+    ><a href={post.frontmatter.pdfFile}
+      ><p class="text-xl md:hover:text-[#5db1bd]">
+        {post.frontmatter.title}
+      </p></a
+    >
+  </a>
 </article>
